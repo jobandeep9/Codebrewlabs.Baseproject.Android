@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BaseApplication</string>
+
+    <!--Facebook keys-->
+    <string name="facebook_app_id">345111549520996</string>
+    <string name="fb_login_protocol_scheme">fb345111549520996</string>
+
+</resources>

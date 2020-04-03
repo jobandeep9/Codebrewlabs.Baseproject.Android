@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLyt"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@null"
+                app:theme="@style/CustomActionBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/drawable_only_top_radius">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_call_button" />
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:background="?attr/selectableItemBackground"
+                        android:fontFamily="@font/circular_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_4"
+                        android:text="@string/login_with_phone_or_email"
+                        android:textAppearance="@style/Toolbar.LoginButton"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_bg_button">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_8"
+                            android:text="@string/login_with_phone_or_email"
+                            android:textAppearance="@style/Toolbar.LoginButton" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_margin="@dimen/dp_10"
+                                android:src="@drawable/ic_call_button" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="@dimen/dp_30"
+                                android:background="@color/colorGrayB2" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/drawable_bg_button">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFacebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_8"
+                            android:text="@string/facebook"
+                            android:textAppearance="@style/Toolbar.LoginButton" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_margin="@dimen/dp_10"
+                                android:src="@drawable/ic_facebbok" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="@dimen/dp_30"
+                                android:background="@color/colorGrayB2" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/drawable_bg_button">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGoogle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_8"
+                            android:text="@string/google"
+                            android:textAppearance="@style/Toolbar.LoginButton" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_margin="@dimen/dp_10"
+                                android:src="@drawable/ic_google" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="@dimen/dp_30"
+                                android:background="@color/colorGrayB2" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                    android:id="@+id/tvEmail"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="@dimen/dp_16"-->
+                    <!--                    android:background="@drawable/drawable_bg_button"-->
+                    <!--                    android:clickable="true"-->
+                    <!--                    android:focusable="true"-->
+                    <!--                    android:foreground="?android:attr/selectableItemBackground"-->
+                    <!--                    android:gravity="center"-->
+                    <!--                    android:text="@string/login_using_email"-->
+                    <!--                    android:textAppearance="@style/Toolbar.LoginButton" />-->
+
+                    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                    android:id="@+id/tvMobile"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="@dimen/dp_16"-->
+                    <!--                    android:background="@drawable/drawable_bg_button"-->
+                    <!--                    android:clickable="true"-->
+                    <!--                    android:focusable="true"-->
+                    <!--                    android:foreground="?android:attr/selectableItemBackground"-->
+                    <!--                    android:gravity="center"-->
+                    <!--                    android:text="@string/login_using_mobile_number"-->
+                    <!--                    android:textAppearance="@style/Toolbar.LoginButton" />-->
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:fontFamily="@font/circular_bold"
+                        android:gravity="center"
+                        android:text="By continue, you agree to our" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/circular_bold"
+                            android:gravity="center"
+                            android:text="Terms of service "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/circular_bold"
+                            android:gravity="center"
+                            android:text="and" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/circular_bold"
+                            android:gravity="center"
+                            android:text=" Privacy Policy"
+                            android:textColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorGreen40"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayB2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circular_bold"
+                    android:gravity="center"
+                    android:text="Already have an account? " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circular_bold"
+                    android:gravity="center"
+                    android:text="Login"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
