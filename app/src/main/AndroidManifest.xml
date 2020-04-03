@@ -14,7 +14,7 @@
         tools:replace="android:name"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.TestActivity">
+        <activity android:name=".ui.main.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
