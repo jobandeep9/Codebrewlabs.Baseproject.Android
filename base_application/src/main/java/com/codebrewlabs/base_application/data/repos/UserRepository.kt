@@ -3,22 +3,19 @@ package com.codebrewlabs.base_application.data.repos
 import android.content.Context
 import android.net.ConnectivityManager
 import androidx.lifecycle.MutableLiveData
-import com.codebrewlabs.base_application.AppApplication
+import com.codebrewlabs.base_application.MyApplication
 import com.codebrewlabs.base_application.data.models.responses.UserData
-import com.codebrewlabs.base_application.utils.PUSH_DATA
-import com.codebrewlabs.base_application.utils.PrefsManager
-import com.codebrewlabs.base_application.utils.USER_DATA
-import com.codebrewlabs.base_application.utils.USER_LANGUAGE
 import com.codebrewlabs.base_application.data.apis.WebService
 import com.codebrewlabs.base_application.data.models.PushData
+import com.codebrewlabs.base_application.utils.*
 import javax.inject.Inject
 import javax.inject.Singleton
 
 
 @Singleton
 class UserRepository @Inject constructor(
-    private val app: AppApplication,
-    private val prefsManager: PrefsManager, private val webService: WebService
+    private val myApp: MyApplication,
+    private val webService: WebService
 ) {
 
     val groupCreatedCall = MutableLiveData<String>()
@@ -30,30 +27,16 @@ class UserRepository @Inject constructor(
 
     fun isNetworkConnected(): Boolean {
         val connectivityManager =
-            app.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            myApp.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         return connectivityManager.activeNetworkInfo != null && connectivityManager.activeNetworkInfo.isConnected
     }
 
     fun isUserLoggedIn(): Boolean {
-        val user = prefsManager.getObject(USER_DATA, UserData::class.java)
+        val user = CurrentSession.cI.getUserData()
         user?.id?.let {
             return true
         }
         return false
-    }
-
-
-    fun getUser(): UserData? {
-        return prefsManager.getObject(USER_DATA, UserData::class.java)
-    }
-
-
-    fun getUserLanguage(): String {
-        return prefsManager.getString(USER_LANGUAGE, "en")
-    }
-
-    fun getPushCallData(): PushData? {
-        return prefsManager.getObject(PUSH_DATA, PushData::class.java)
     }
 
     fun pushTokenUpdate(token: String) {

@@ -3,7 +3,7 @@ package com.codebrewlabs.base_application.di
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.codebrewlabs.base_application.AppApplication
+import com.codebrewlabs.base_application.utils.base.BaseAppApplication
 import com.codebrewlabs.base_application.pushNotifications.MessagingService
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -19,12 +19,12 @@ object AppModule {
     @Provides
     @Singleton
     @JvmStatic
-    fun provideContext(app: AppApplication): Context = app.applicationContext
+    fun provideContext(baseApp: BaseAppApplication): Context = baseApp.applicationContext
 
-    @Provides
-    @Singleton
-    @JvmStatic
-    fun provideMessagingService(messagingService: MessagingService): MessagingService = MessagingService()
+//    @Provides
+//    @Singleton
+//    @JvmStatic
+//    fun provideMessagingService(messagingService: MessagingService): MessagingService = MessagingService()
 
     @Provides
     @Singleton

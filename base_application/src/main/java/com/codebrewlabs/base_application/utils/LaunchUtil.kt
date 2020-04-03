@@ -16,7 +16,6 @@ class LaunchUtil {
             } catch (e: ClassNotFoundException) {
                 print(e.message)
             }
-
         }
     }
 }

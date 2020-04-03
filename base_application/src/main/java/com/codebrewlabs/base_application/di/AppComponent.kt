@@ -1,6 +1,6 @@
 package com.codebrewlabs.base_application.di
 
-import com.codebrewlabs.base_application.AppApplication
+import com.codebrewlabs.base_application.utils.base.BaseAppApplication
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
@@ -16,8 +16,8 @@ import javax.inject.Singleton
     ViewModelsModule::class
 ])
 @Singleton
-interface AppComponent : AndroidInjector<AppApplication> {
+interface AppComponent : AndroidInjector<BaseAppApplication> {
 
     @Component.Builder
-    abstract class Builder : AndroidInjector.Builder<AppApplication>()
+    abstract class Builder : AndroidInjector.Builder<BaseAppApplication>()
 }

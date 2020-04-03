@@ -1,7 +1,7 @@
 package com.codebrewlabs.base_application.di
 
 import com.codebrewlabs.base_application.ui.SplashActivity
-import com.codebrewlabs.base_application.ui.base.BaseActivity
+import com.codebrewlabs.base_application.utils.base.BaseActivity
 import com.codebrewlabs.base_application.ui.loginsignup.LoginFragment
 import com.codebrewlabs.base_application.ui.loginsignup.SignUpActivity
 import com.codebrewlabs.base_application.ui.loginsignup.SignUpFragment

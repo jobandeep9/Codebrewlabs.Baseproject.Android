@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.codebrewlabs.base_application.R
 import com.codebrewlabs.base_application.databinding.FragmentWelcomeBinding
-import com.codebrewlabs.base_application.ui.base.BaseFragment
+import com.codebrewlabs.base_application.utils.base.BaseFragment
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException

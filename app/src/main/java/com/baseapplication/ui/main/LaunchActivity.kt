@@ -3,7 +3,7 @@ package com.baseapplication.ui.main
 import androidx.databinding.DataBindingUtil
 import com.baseapplication.R
 import com.baseapplication.databinding.ActivityLaunchBinding
-import com.codebrewlabs.base_application.ui.base.BaseActivity
+import com.codebrewlabs.base_application.utils.base.BaseActivity
 import com.codebrewlabs.base_application.utils.LaunchUtil
 
 class LaunchActivity : BaseActivity<ActivityLaunchBinding>() {

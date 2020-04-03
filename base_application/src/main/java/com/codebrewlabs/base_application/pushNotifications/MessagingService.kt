@@ -24,17 +24,9 @@ import java.util.*
 import javax.inject.Inject
 
 
-class MessagingService : FirebaseMessagingService() {
-
-    @Inject
-    lateinit var userRepository: UserRepository
-
-    @Inject
-    lateinit var prefsManager: PrefsManager
-
+class MessagingService(private var userRepository: UserRepository) : FirebaseMessagingService() {
 
     private val channelId = "Base"
-
 
     private lateinit var notificationData: PushData
 
